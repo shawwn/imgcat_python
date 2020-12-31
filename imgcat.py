@@ -33,7 +33,7 @@ def st():
   else:
     return "\a"
 
-def imgcat(img, name='test.png', width='auto', height='auto', preserve_aspect_ratio=True, file=sys.stdout):
+def imgcat(img, name='test.png', width='auto', height='auto', preserve_aspect_ratio=True, *, file=sys.stdout):
   b = base64.b64encode(image_to_bytes(img)).decode('utf8')
   s = []
   s += [osc()]
